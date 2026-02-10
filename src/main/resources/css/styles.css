@@ -1,0 +1,279 @@
+/* ========================================
+   ГЛОБАЛЬНЫЕ СТИЛИ
+   ======================================== */
+
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* ========================================
+   ЦВЕТОВАЯ ПАЛИТРА
+   ======================================== */
+
+* {
+    /* Основные цвета */
+    -primary-color: #3B82F6;
+    -primary-hover: #2563EB;
+    -primary-pressed: #1D4ED8;
+    
+    /* Фон */
+    -bg-light: #F3F4F6;
+    -bg-card: #FFFFFF;
+    -bg-input: #F9FAFB;
+    
+    /* Текст */
+    -text-primary: #111827;
+    -text-secondary: #6B7280;
+    -text-muted: #9CA3AF;
+    
+    /* Границы */
+    -border-color: #E5E7EB;
+    -border-focus: #3B82F6;
+    
+    /* Тени */
+    -shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    -shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    -shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    -shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   КОРНЕВЫЕ КОНТЕЙНЕРЫ
+   ======================================== */
+
+.root-pane {
+    -fx-background-color: -bg-light;
+}
+
+.auth-card {
+    -fx-background-color: -bg-card;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 20, 0, 0, 4);
+    -fx-padding: 40px;
+}
+
+/* ========================================
+   ИКОНКА И ЗАГОЛОВКИ ПРИЛОЖЕНИЯ
+   ======================================== */
+
+.app-icon-container {
+    -fx-background-color: -primary-color;
+    -fx-background-radius: 12px;
+    -fx-pref-width: 70px;
+    -fx-pref-height: 70px;
+    -fx-effect: dropshadow(three-pass-box, rgba(59, 130, 246, 0.3), 10, 0, 0, 2);
+}
+
+.app-icon {
+    -fx-fill: white;
+}
+
+.app-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-primary;
+}
+
+.app-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: -text-secondary;
+}
+
+/* ========================================
+   ТЕКСТОВЫЕ ПОЛЯ
+   ======================================== */
+
+.field-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-text-fill: -text-primary;
+}
+
+.custom-text-field {
+    -fx-background-color: -bg-input;
+    -fx-background-radius: 8px;
+    -fx-border-color: -border-color;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-padding: 12px 16px;
+    -fx-font-size: 14px;
+    -fx-text-fill: -text-primary;
+    -fx-prompt-text-fill: -text-muted;
+}
+
+.custom-text-field:focused {
+    -fx-border-color: -border-focus;
+    -fx-border-width: 2px;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(59, 130, 246, 0.1), 4, 0, 0, 0);
+}
+
+.custom-text-field:hover {
+    -fx-border-color: -text-muted;
+}
+
+/* Password Field */
+.custom-text-field.password-field {
+    -fx-background-color: -bg-input;
+}
+
+/* ========================================
+   КНОПКИ
+   ======================================== */
+
+.primary-button {
+    -fx-background-color: -primary-color;
+    -fx-background-radius: 8px;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-padding: 12px 24px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(59, 130, 246, 0.25), 4, 0, 0, 2);
+}
+
+.primary-button:hover {
+    -fx-background-color: -primary-hover;
+    -fx-effect: dropshadow(three-pass-box, rgba(59, 130, 246, 0.35), 6, 0, 0, 3);
+}
+
+.primary-button:pressed {
+    -fx-background-color: -primary-pressed;
+    -fx-effect: dropshadow(three-pass-box, rgba(59, 130, 246, 0.2), 2, 0, 0, 1);
+}
+
+/* ========================================
+   CHECKBOX
+   ======================================== */
+
+.custom-checkbox {
+    -fx-text-fill: -text-secondary;
+    -fx-font-size: 13px;
+}
+
+.custom-checkbox .box {
+    -fx-background-color: -bg-input;
+    -fx-border-color: -border-color;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.custom-checkbox:selected .box {
+    -fx-background-color: -primary-color;
+    -fx-border-color: -primary-color;
+}
+
+.custom-checkbox:selected .mark {
+    -fx-background-color: white;
+}
+
+.custom-checkbox:hover .box {
+    -fx-border-color: -primary-color;
+}
+
+/* ========================================
+   ГИПЕРССЫЛКИ
+   ======================================== */
+
+.link {
+    -fx-text-fill: -primary-color;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-underline: false;
+    -fx-cursor: hand;
+}
+
+.link:hover {
+    -fx-text-fill: -primary-hover;
+    -fx-underline: true;
+}
+
+.link:pressed {
+    -fx-text-fill: -primary-pressed;
+}
+
+/* ========================================
+   ВТОРИЧНЫЙ ТЕКСТ
+   ======================================== */
+
+.secondary-text {
+    -fx-text-fill: -text-secondary;
+    -fx-font-size: 13px;
+}
+
+/* ========================================
+   SCROLLBAR
+   ======================================== */
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: derive(-text-muted, 30%);
+    -fx-background-radius: 5px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: -text-muted;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* ========================================
+   АНИМАЦИИ И ПЕРЕХОДЫ
+   ======================================== */
+
+.custom-text-field,
+.primary-button,
+.link {
+    -fx-transition: all 0.2s ease;
+}
+
+/* ========================================
+   АДАПТИВНОСТЬ
+   ======================================== */
+
+@media (max-width: 768px) {
+    .auth-card {
+        -fx-padding: 30px 20px;
+    }
+    
+    .app-title {
+        -fx-font-size: 24px;
+    }
+}
+
+/* ========================================
+   УТИЛИТЫ
+   ======================================== */
+
+.mt-10 {
+    -fx-margin-top: 10px;
+}
+
+.mt-20 {
+    -fx-margin-top: 20px;
+}
+
+.mb-10 {
+    -fx-margin-bottom: 10px;
+}
+
+.text-center {
+    -fx-alignment: center;
+}
+
+.text-danger {
+    -fx-text-fill: #EF4444;
+}
+
+.text-success {
+    -fx-text-fill: #10B981;
+}
