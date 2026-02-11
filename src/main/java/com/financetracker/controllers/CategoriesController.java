@@ -236,12 +236,12 @@ public class CategoriesController {
     
     @FXML
     private void handlePlansLimitsClick() {
-        showComingSoon("Plans & Limits");
+        SceneManager.switchScene("plans-limits");
     }
     
     @FXML
     private void handleGoalsDebtsClick() {
-        showComingSoon("Goals & Debts");
+        SceneManager.switchScene("goals-debts");
     }
     
     @FXML
