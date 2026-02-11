@@ -246,7 +246,7 @@ public class CategoriesController {
     
     @FXML
     private void handleSettingsClick() {
-        showComingSoon("Settings");
+        SceneManager.switchScene("settings");
     }
     
     /**
