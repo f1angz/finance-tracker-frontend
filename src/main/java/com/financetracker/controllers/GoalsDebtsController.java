@@ -318,7 +318,7 @@ public class GoalsDebtsController {
 
     @FXML
     private void handleSettingsClick() {
-        showComingSoon("Settings");
+        SceneManager.switchScene("settings");
     }
 
     private void handleLogout() {

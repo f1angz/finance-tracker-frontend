@@ -438,7 +438,7 @@ public class OperationsController {
     
     @FXML
     private void handleSettingsClick() {
-        showComingSoon("Settings");
+        SceneManager.switchScene("settings");
     }
     
     /**

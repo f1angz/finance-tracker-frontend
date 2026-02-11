@@ -277,7 +277,7 @@ public class DashboardController {
     @FXML
     private void handleSettingsClick() {
         setActiveMenuItem(settingsMenuItem);
-        showComingSoon("Settings");
+        SceneManager.switchScene("settings");
     }
     
     /**

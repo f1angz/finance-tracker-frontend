@@ -277,7 +277,7 @@ public class PlansLimitsController {
 
     @FXML
     private void handleSettingsClick() {
-        showComingSoon("Settings");
+        SceneManager.switchScene("settings");
     }
 
     private void handleLogout() {
