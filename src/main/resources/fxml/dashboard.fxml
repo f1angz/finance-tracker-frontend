@@ -28,62 +28,80 @@
             <!-- Меню навигации -->
             <VBox styleClass="sidebar-menu" spacing="2" VBox.vgrow="ALWAYS">
                 
-                <Button fx:id="dashboardMenuItem" styleClass="menu-item, menu-item-active" 
+                <Button fx:id="dashboardMenuItem" styleClass="menu-item, menu-item-active"
                        onAction="#handleDashboardClick" maxWidth="Infinity">
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
                             <FontAwesomeIconView glyphName="DASHBOARD" size="16" styleClass="menu-icon"/>
-                            <Label text="Dashboard" styleClass="menu-label"/>
+                            <VBox spacing="1">
+                                <Label text="Dashboard" styleClass="menu-label"/>
+                                <Label text="Сводка" styleClass="menu-sublabel"/>
+                            </VBox>
                         </HBox>
                     </graphic>
                 </Button>
-                
-                <Button fx:id="operationsMenuItem" styleClass="menu-item" 
+
+                <Button fx:id="operationsMenuItem" styleClass="menu-item"
                        onAction="#handleOperationsClick" maxWidth="Infinity">
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
                             <FontAwesomeIconView glyphName="EXCHANGE" size="16" styleClass="menu-icon"/>
-                            <Label text="Operations" styleClass="menu-label"/>
+                            <VBox spacing="1">
+                                <Label text="Operations" styleClass="menu-label"/>
+                                <Label text="Операции" styleClass="menu-sublabel"/>
+                            </VBox>
                         </HBox>
                     </graphic>
                 </Button>
-                
-                <Button fx:id="categoriesMenuItem" styleClass="menu-item" 
+
+                <Button fx:id="categoriesMenuItem" styleClass="menu-item"
                        onAction="#handleCategoriesClick" maxWidth="Infinity">
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
                             <FontAwesomeIconView glyphName="FOLDER_OPEN" size="16" styleClass="menu-icon"/>
-                            <Label text="Categories" styleClass="menu-label"/>
+                            <VBox spacing="1">
+                                <Label text="Categories" styleClass="menu-label"/>
+                                <Label text="Категории" styleClass="menu-sublabel"/>
+                            </VBox>
                         </HBox>
                     </graphic>
                 </Button>
-                
-                <Button fx:id="plansLimitsMenuItem" styleClass="menu-item" 
+
+                <Button fx:id="plansLimitsMenuItem" styleClass="menu-item"
                        onAction="#handlePlansLimitsClick" maxWidth="Infinity">
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
                             <FontAwesomeIconView glyphName="LINE_CHART" size="16" styleClass="menu-icon"/>
-                            <Label text="Plans&amp;Limits" styleClass="menu-label"/>
+                            <VBox spacing="1">
+                                <Label text="Plans/Limits" styleClass="menu-label"/>
+                                <Label text="Лимиты" styleClass="menu-sublabel"/>
+                            </VBox>
                         </HBox>
                     </graphic>
                 </Button>
-                
-                <Button fx:id="goalsDebtsMenuItem" styleClass="menu-item" 
+
+                <Button fx:id="goalsDebtsMenuItem" styleClass="menu-item"
                        onAction="#handleGoalsDebtsClick" maxWidth="Infinity">
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
                             <FontAwesomeIconView glyphName="TARGET" size="16" styleClass="menu-icon"/>
-                            <Label text="Goals &amp; Debts" styleClass="menu-label"/>
+                            <VBox spacing="1">
+                                <Label text="Goals &amp; Debts" styleClass="menu-label"/>
+                                <Label text="Цели и долги" styleClass="menu-sublabel"/>
+                            </VBox>
                         </HBox>
                     </graphic>
                 </Button>
-                
-                <Button fx:id="settingsMenuItem" styleClass="menu-item" 
+
+                <Button fx:id="settingsMenuItem" styleClass="menu-item"
                        onAction="#handleSettingsClick" maxWidth="Infinity">
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
                             <FontAwesomeIconView glyphName="COG" size="16" styleClass="menu-icon"/>
-                            <Label text="Settings" styleClass="menu-label"/>
+                            <VBox spacing="1">
+                                <Label text="Settings" styleClass="menu-label"/>
+                                <Label text="Настройки" styleClass="menu-sublabel"/>
+                            </VBox>
                         </HBox>
                     </graphic>
                 </Button>
@@ -148,70 +166,66 @@
                 </Button>
                 
                 <HBox.margin>
-                    <Insets top="20" right="30" bottom="20" left="30"/>
+                    <Insets top="20" right="32" bottom="0" left="32"/>
                 </HBox.margin>
             </HBox>
-            
+
             <!-- Основной контент с прокруткой -->
             <ScrollPane styleClass="content-scroll" fitToWidth="true" VBox.vgrow="ALWAYS">
                 <VBox spacing="25">
-                    
+
                     <!-- Карточки статистики -->
                     <HBox spacing="20" alignment="CENTER_LEFT">
                         
                         <!-- Баланс -->
-                        <VBox styleClass="stat-card" spacing="10" HBox.hgrow="ALWAYS">
-                            <HBox alignment="CENTER_LEFT" spacing="10">
+                        <VBox styleClass="stat-card" spacing="12" HBox.hgrow="ALWAYS">
+                            <HBox alignment="CENTER_LEFT">
                                 <StackPane styleClass="stat-icon, stat-icon-blue">
                                     <FontAwesomeIconView glyphName="DOLLAR" size="20" fill="WHITE"/>
                                 </StackPane>
-                                <VBox spacing="2">
-                                    <Label text="Баланс за месяц" styleClass="stat-label"/>
-                                    <Label text="+12.5%" styleClass="stat-change, stat-positive"/>
-                                </VBox>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="+12.5%" styleClass="stat-change, stat-positive"/>
                             </HBox>
+                            <Label text="Баланс за месяц" styleClass="stat-label"/>
                             <Label fx:id="balanceLabel" text="₽ 245,680" styleClass="stat-value"/>
                         </VBox>
-                        
+
                         <!-- Доходы -->
-                        <VBox styleClass="stat-card" spacing="10" HBox.hgrow="ALWAYS">
-                            <HBox alignment="CENTER_LEFT" spacing="10">
+                        <VBox styleClass="stat-card" spacing="12" HBox.hgrow="ALWAYS">
+                            <HBox alignment="CENTER_LEFT">
                                 <StackPane styleClass="stat-icon, stat-icon-green">
                                     <FontAwesomeIconView glyphName="ARROW_UP" size="20" fill="WHITE"/>
                                 </StackPane>
-                                <VBox spacing="2">
-                                    <Label text="Доходы" styleClass="stat-label"/>
-                                    <Label text="+8.2%" styleClass="stat-change, stat-positive"/>
-                                </VBox>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="+8.2%" styleClass="stat-change, stat-positive"/>
                             </HBox>
+                            <Label text="Доходы" styleClass="stat-label"/>
                             <Label fx:id="incomeLabel" text="₽ 320,450" styleClass="stat-value"/>
                         </VBox>
-                        
+
                         <!-- Расходы -->
-                        <VBox styleClass="stat-card" spacing="10" HBox.hgrow="ALWAYS">
-                            <HBox alignment="CENTER_LEFT" spacing="10">
+                        <VBox styleClass="stat-card" spacing="12" HBox.hgrow="ALWAYS">
+                            <HBox alignment="CENTER_LEFT">
                                 <StackPane styleClass="stat-icon, stat-icon-red">
                                     <FontAwesomeIconView glyphName="ARROW_DOWN" size="20" fill="WHITE"/>
                                 </StackPane>
-                                <VBox spacing="2">
-                                    <Label text="Расходы" styleClass="stat-label"/>
-                                    <Label text="-3.1%" styleClass="stat-change, stat-negative"/>
-                                </VBox>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="-3.1%" styleClass="stat-change, stat-negative"/>
                             </HBox>
+                            <Label text="Расходы" styleClass="stat-label"/>
                             <Label fx:id="expensesLabel" text="₽ 74,770" styleClass="stat-value"/>
                         </VBox>
-                        
+
                         <!-- Экономия -->
-                        <VBox styleClass="stat-card" spacing="10" HBox.hgrow="ALWAYS">
-                            <HBox alignment="CENTER_LEFT" spacing="10">
-                                <StackPane styleClass="stat-icon, stat-icon-purple">
+                        <VBox styleClass="stat-card" spacing="12" HBox.hgrow="ALWAYS">
+                            <HBox alignment="CENTER_LEFT">
+                                <StackPane styleClass="stat-icon, stat-icon-green">
                                     <FontAwesomeIconView glyphName="SAVE" size="20" fill="WHITE"/>
                                 </StackPane>
-                                <VBox spacing="2">
-                                    <Label text="Экономия" styleClass="stat-label"/>
-                                    <Label text="+15.8%" styleClass="stat-change, stat-positive"/>
-                                </VBox>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="+15.8%" styleClass="stat-change, stat-positive"/>
                             </HBox>
+                            <Label text="Экономия" styleClass="stat-label"/>
                             <Label fx:id="savingsLabel" text="₽ 245,680" styleClass="stat-value"/>
                         </VBox>
                         
@@ -221,7 +235,7 @@
                     <HBox spacing="20" alignment="TOP_CENTER">
                         
                         <!-- Круговая диаграмма -->
-                        <VBox styleClass="chart-card" spacing="15" prefWidth="420">
+                        <VBox styleClass="chart-card" spacing="15" HBox.hgrow="ALWAYS">
                             <Label text="Расходы по категориям" styleClass="chart-title"/>
                             
                             <PieChart fx:id="categoryPieChart" styleClass="category-pie-chart" 
@@ -252,7 +266,7 @@
                     </HBox>
                     
                     <VBox.margin>
-                        <Insets top="0" right="30" bottom="30" left="30"/>
+                        <Insets top="32" right="32" bottom="32" left="32"/>
                     </VBox.margin>
                 </VBox>
             </ScrollPane>

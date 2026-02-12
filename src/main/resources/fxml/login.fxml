@@ -24,7 +24,7 @@
     </VBox>
 
     <!-- Центральная карточка входа -->
-    <VBox styleClass="auth-card" alignment="CENTER" maxWidth="448" maxHeight="344">
+    <VBox styleClass="auth-card" alignment="CENTER" prefWidth="448" prefHeight="344" maxWidth="448" maxHeight="344">
         <!-- Форма входа -->
         <VBox spacing="20" VBox.vgrow="ALWAYS">
 
