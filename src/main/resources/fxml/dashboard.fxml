@@ -159,41 +159,60 @@
         <VBox styleClass="main-content">
             
             <!-- Верхняя панель -->
-            <HBox styleClass="top-bar" alignment="CENTER_LEFT" spacing="15" maxHeight="64">
+            <HBox styleClass="top-bar"
+                  alignment="CENTER_LEFT"
+                  spacing="20"
+                  prefHeight="64">
+
+                <padding>
+                    <Insets top="20" right="32" bottom="20" left="32"/>
+                </padding>
 
                 <!-- Поиск -->
-                <HBox styleClass="search-box" alignment="CENTER_LEFT" spacing="10" HBox.hgrow="ALWAYS">
-                    <FontAwesomeIconView glyphName="SEARCH" size="14" styleClass="search-icon"/>
-                    <TextField fx:id="searchField" promptText="Поиск операций, категорий..." 
-                              styleClass="search-field" HBox.hgrow="ALWAYS"/>
+                <HBox styleClass="search-box"
+                      alignment="CENTER_LEFT"
+                      spacing="10"
+                      prefWidth="570"
+                      maxWidth="570">
+
+                    <FontAwesomeIconView glyphName="SEARCH"
+                                         size="14"
+                                         styleClass="search-icon"/>
+
+                    <TextField fx:id="searchField"
+                               promptText="Поиск операций, категорий..."
+                               styleClass="search-field"
+                                prefWidth="190"/>
                 </HBox>
-                
+
                 <Region HBox.hgrow="ALWAYS"/>
-                
-                <!-- Кнопка добавить операцию -->
-                <Button text="+ Добавить операцию" styleClass="primary-button" 
-                       onAction="#handleAddOperation"/>
-                
-                <!-- Уведомления -->
-                <Button styleClass="icon-button" onAction="#handleNotifications">
+
+                <Button text="+ Добавить операцию"
+                        styleClass="primary-button"
+                        onAction="#handleAddOperation"/>
+
+                <Button styleClass="icon-button"
+                        onAction="#handleNotifications">
                     <graphic>
                         <StackPane>
-                            <FontAwesomeIconView glyphName="BELL" size="18" styleClass="icon-button-icon"/>
-                            <Label text="3" styleClass="notification-badge"/>
+                            <FontAwesomeIconView glyphName="BELL"
+                                                 size="18"
+                                                 styleClass="icon-button-icon"/>
+                            <Label text="3"
+                                   styleClass="notification-badge"/>
                         </StackPane>
                     </graphic>
                 </Button>
-                
-                <!-- Профиль -->
-                <Button styleClass="icon-button" onAction="#handleProfile">
+
+                <Button styleClass="icon-button"
+                        onAction="#handleProfile">
                     <graphic>
-                        <FontAwesomeIconView glyphName="USER" size="18" styleClass="icon-button-icon"/>
+                        <FontAwesomeIconView glyphName="USER"
+                                             size="18"
+                                             styleClass="icon-button-icon"/>
                     </graphic>
                 </Button>
-                
-                <HBox.margin>
-                    <Insets top="20" right="32" bottom="0" left="32"/>
-                </HBox.margin>
+
             </HBox>
 
             <!-- Основной контент с прокруткой -->

@@ -57,11 +57,12 @@
 .sidebar {
     -fx-background-color: white;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.08), 2, 0, 2, 0);
+    -fx-border-color: #E4E7EC;
+    -fx-border-width: 0 1 0 0;
 }
 
 .sidebar-header {
-    -fx-border-color: -border-color;
-    -fx-border-width: 0 0 1 0;
+     -fx-padding: 0 0 16 0;
 }
 
 .sidebar-title {
@@ -172,14 +173,19 @@
 
 .top-bar {
     -fx-background-color: white;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.04), 2, 0, 0, 1);
+    -fx-border-color: #E4E7EC;
+    -fx-border-width: 0 0 1 0;
 }
 
 .search-box {
-    -fx-background-color: -bg-input;
-    -fx-background-radius: 8px;
-    -fx-padding: 10px 15px;
-    -fx-max-width: 400px;
+    -fx-background-color: #F2F4F7;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #D0D5DD;
+    -fx-border-width: 1;
+    -fx-padding: 0 16 0 16;
+    -fx-pref-height: 44px;
+    -fx-pref-width: 480px;   /* 🔥 вот это ключ */
 }
 
 .search-icon {
@@ -188,10 +194,9 @@
 
 .search-field {
     -fx-background-color: transparent;
-    -fx-border-width: 0;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
     -fx-font-size: 14px;
-    -fx-text-fill: -text-primary;
-    -fx-prompt-text-fill: -text-muted;
 }
 
 .search-field:focused {
