@@ -23,8 +23,8 @@
     -bg-input: #F9FAFB;
     
     /* Текст */
-    -text-primary: #111827;
-    -text-secondary: #6B7280;
+    -text-primary: #101828;
+    -text-secondary: #6A7282;;
     -text-muted: #9CA3AF;
     
     /* Границы */
@@ -65,13 +65,13 @@
 }
 
 .sidebar-title {
-    -fx-font-size: 20px;
+    -fx-font-size: 24px;
     -fx-font-weight: bold;
     -fx-text-fill: -text-primary;
 }
 
 .sidebar-subtitle {
-    -fx-font-size: 12px;
+    -fx-font-size: 14px;
     -fx-text-fill: -text-secondary;
 }
 
@@ -293,7 +293,7 @@
 }
 
 .stat-change {
-    -fx-font-size: 12px;
+    -fx-font-size: 16px;
     -fx-font-weight: 600;
 }
 
