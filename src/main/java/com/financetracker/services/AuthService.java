@@ -43,7 +43,7 @@ public class AuthService {
             "1",
             "Иван Петров",
             "test@example.com",
-            "password123"
+            "123456"
         );
         users.put(testUser.getEmail(), testUser);
     }
