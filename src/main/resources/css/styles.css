@@ -704,9 +704,9 @@
    ======================================== */
 
 .type-indicator {
-    -fx-pref-width: 10px;
-    -fx-pref-height: 10px;
-    -fx-background-radius: 50%;
+    -fx-pref-width: 12px;
+    -fx-pref-height: 12px;
+    -fx-background-radius: 20%;
 }
 
 .type-indicator-income {
@@ -763,6 +763,8 @@
     -fx-font-size: 12px;
     -fx-font-weight: 600;
     -fx-text-fill: -text-secondary;
+    -fx-alignment: CENTER-LEFT;
+    -fx-text-alignment: LEFT;
 }
 
 .operations-table .table-row-cell {

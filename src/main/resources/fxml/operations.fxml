@@ -24,12 +24,12 @@
             <!-- Меню навигации -->
             <VBox spacing="4" styleClass="sidebar-menu" VBox.vgrow="ALWAYS">
 
-                <Button fx:id="dashboardMenuItem" maxWidth="Infinity" onAction="#handleDashboardClick" styleClass="menu-item, menu-item-active">
+                <Button fx:id="dashboardMenuItem" maxWidth="Infinity" onAction="#handleDashboardClick" styleClass="menu-item">
                     <graphic>
                         <HBox alignment="CENTER_LEFT" spacing="12">
                             <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                                 <image>
-                                    <Image url="@/icons/dashboard_active.png" />
+                                    <Image url="@/icons/dashboard.png" />
                                 </image>
                             </ImageView>
                             <VBox spacing="1">
@@ -40,12 +40,12 @@
                     </graphic>
                 </Button>
 
-                <Button fx:id="operationsMenuItem" maxWidth="Infinity" onAction="#handleOperationsClick" styleClass="menu-item">
+                <Button fx:id="operationsMenuItem" maxWidth="Infinity" onAction="#handleOperationsClick" styleClass="menu-item, menu-item-active">
                     <graphic>
                         <HBox alignment="CENTER_LEFT" spacing="12">
                             <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                                 <image>
-                                    <Image url="@/icons/operations.png" />
+                                    <Image url="@/icons/operations_active.png" />
                                 </image>
                             </ImageView>
                             <VBox spacing="1">
@@ -202,9 +202,9 @@
                         <Insets left="32" right="32"/>
                     </VBox.margin>
                     <!-- Поиск по таблице -->
-                    <HBox alignment="CENTER_LEFT" spacing="10" styleClass="filter-search">
+                    <HBox alignment="CENTER_LEFT" spacing="10" styleClass="filter-search" prefWidth="620">
                         <FontAwesomeIconView glyphName="SEARCH" size="14" styleClass="search-icon" />
-                        <TextField fx:id="tableSearchField" promptText="Поиск по комментарию, категории..." styleClass="filter-search-field" />
+                        <TextField fx:id="tableSearchField" promptText="Поиск по комментарию, категории..." styleClass="filter-search-field" prefWidth="620"/>
                     </HBox>
                     
                     <!-- Фильтр по типу операции -->

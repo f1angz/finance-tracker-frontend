@@ -73,7 +73,7 @@
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
                             <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
-                                <image><Image url="@/icons/limits.png"/></image>
+                                <image><Image url="@/icons/limits_active.png"/></image>
                             </ImageView>
                             <VBox spacing="1">
                                 <Label text="Plans/Limits" styleClass="menu-label"/>

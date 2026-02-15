@@ -29,13 +29,13 @@
             <!-- Меню навигации -->
             <VBox styleClass="sidebar-menu" spacing="4" VBox.vgrow="ALWAYS">
 
-                <Button fx:id="dashboardMenuItem" styleClass="menu-item, menu-item-active"
+                <Button fx:id="dashboardMenuItem" styleClass="menu-item"
                         onAction="#handleDashboardClick" maxWidth="Infinity">
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
                             <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
                                 <image>
-                                    <Image url="@/icons/dashboard_active.png"/>
+                                    <Image url="@/icons/dashboard.png"/>
                                 </image>
                             </ImageView>
                             <VBox spacing="1">
@@ -52,7 +52,7 @@
                         <HBox spacing="12" alignment="CENTER_LEFT">
                             <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
                                 <image>
-                                    <Image url="@/icons/operations_active.png"/>
+                                    <Image url="@/icons/operations.png"/>
                                 </image>
                             </ImageView>
                             <VBox spacing="1">
@@ -63,13 +63,13 @@
                     </graphic>
                 </Button>
 
-                <Button fx:id="categoriesMenuItem" styleClass="menu-item"
+                <Button fx:id="categoriesMenuItem" styleClass="menu-item, menu-item-active"
                         onAction="#handleCategoriesClick" maxWidth="Infinity">
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
                             <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
                                 <image>
-                                    <Image url="@/icons/categories.png"/>
+                                    <Image url="@/icons/categories_active.png"/>
                                 </image>
                             </ImageView>
                             <VBox spacing="1">
@@ -217,6 +217,9 @@
             <!-- Основной контент с прокруткой -->
             <ScrollPane styleClass="content-scroll" fitToWidth="true" VBox.vgrow="ALWAYS">
                 <VBox spacing="32">
+                    <padding>
+                        <Insets left="32" right="32" top="32" />
+                    </padding>
 
                     <!-- Заголовок + кнопка на одной строке -->
                     <HBox alignment="CENTER_LEFT" spacing="20">

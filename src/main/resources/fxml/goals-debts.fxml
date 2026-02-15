@@ -88,7 +88,7 @@
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
                             <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
-                                <image><Image url="@/icons/goals.png"/></image>
+                                <image><Image url="@/icons/goals_active.png"/></image>
                             </ImageView>
                             <VBox spacing="1">
                                 <Label text="Goals &amp; Debts" styleClass="menu-label"/>
@@ -134,7 +134,7 @@
     </left>
 
     <center>
-        <VBox styleClass="main-content" spacing="0">
+        <VBox styleClass="main-content">
             <HBox styleClass="top-bar"
                   alignment="CENTER_LEFT"
                   spacing="20"
@@ -195,6 +195,7 @@
                                 <HBox alignment="CENTER_RIGHT">
                                     <Button text="+ Добавить цель" styleClass="primary-button" onAction="#handleAddGoal"/>
                                 </HBox>
+                                <Label text="Активные цели" styleClass="debts-section-title"/>
                                 <GridPane fx:id="goalsGrid" hgap="24" vgap="24">
                                     <columnConstraints>
                                         <ColumnConstraints percentWidth="50" hgrow="ALWAYS"/>

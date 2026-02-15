@@ -11,6 +11,8 @@ import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -21,6 +23,7 @@ import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -209,32 +212,25 @@ public class OperationsController {
     private HBox createTypeCell(Operation.OperationType type) {
         HBox hbox = new HBox(8);
         hbox.setAlignment(Pos.CENTER_LEFT);
-        
-        // Иконка
-        FontAwesomeIconView icon = new FontAwesomeIconView();
-        StackPane iconContainer = new StackPane();
-        iconContainer.setPrefSize(24, 24);
-        iconContainer.setStyle("-fx-background-radius: 4px;");
-        
-        if (type == Operation.OperationType.INCOME) {
-            icon.setGlyphName("ARROW_UP");
-            icon.setSize("12");
-            icon.setFill(Color.web("#10B981"));
-            iconContainer.setStyle(iconContainer.getStyle() + "-fx-background-color: #D1FAE5;");
-        } else {
-            icon.setGlyphName("ARROW_DOWN");
-            icon.setSize("12");
-            icon.setFill(Color.web("#EF4444"));
-            iconContainer.setStyle(iconContainer.getStyle() + "-fx-background-color: #FEE2E2;");
+
+        ImageView imageView = new ImageView();
+
+        String imagePath;
+
+        if (type == Operation.OperationType.INCOME) {{
+            imagePath = "/icons/income_operations.png";
+        }} else {
+            imagePath = "/icons/expensions_operations.png";
         }
-        
-        iconContainer.getChildren().add(icon);
-        
-        // Текст
-        Label label = new Label(type.getDisplayName());
-        label.setStyle("-fx-font-size: 13px;");
-        
-        hbox.getChildren().addAll(iconContainer, label);
+
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(imagePath)));
+        imageView.setImage(image);
+
+        imageView.setFitWidth(72);
+        imageView.setFitHeight(22);
+        imageView.setPreserveRatio(true);
+
+        hbox.getChildren().add(imageView);
         return hbox;
     }
     

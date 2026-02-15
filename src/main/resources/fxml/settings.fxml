@@ -97,7 +97,7 @@
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
                             <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
-                                <image><Image url="@/icons/settings.png"/></image>
+                                <image><Image url="@/icons/settings_active.png"/></image>
                             </ImageView>
                             <VBox spacing="1">
                                 <Label text="Settings" styleClass="menu-label"/>
@@ -167,11 +167,13 @@
                     </VBox>
 
                     <HBox spacing="16">
-                        <VBox styleClass="settings-card" spacing="14" HBox.hgrow="ALWAYS">
+                        <VBox styleClass="settings-card" spacing="24" HBox.hgrow="ALWAYS">
                             <Label text="Внешний вид" styleClass="settings-section-title"/>
 
                             <HBox alignment="CENTER_LEFT" spacing="14">
-                                <FontAwesomeIconView glyphName="SUN_O" size="18" styleClass="settings-leading-icon"/>
+                                <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
+                                    <image><Image url="@/icons/theme.png"/></image>
+                                </ImageView>
                                 <VBox spacing="4" HBox.hgrow="ALWAYS">
                                     <Label text="Тёмная тема" styleClass="settings-item-title" style="-fx-font-size: 16px;"/>
                                     <Label text="Переключение между светлой и тёмной темой" styleClass="settings-item-subtitle"/>
@@ -202,7 +204,7 @@
                             </HBox>
                         </VBox>
 
-                        <VBox styleClass="settings-card settings-profile-card" spacing="16" prefWidth="432" minWidth="360" maxWidth="432">
+                        <VBox styleClass="settings-card" spacing="16" prefWidth="432" minWidth="360" maxWidth="432">
                             <Label text="Профиль" styleClass="settings-section-title"/>
 
                             <VBox spacing="10" alignment="CENTER">
@@ -227,7 +229,7 @@
                                 </graphic>
                             </Button>
 
-                            <Button text="   Выйти" styleClass="settings-profile-action settings-logout-button" onAction="#handleLogoutAction" maxWidth="Infinity">
+                            <Button text="   Выйти" styleClass="settings-logout-button, settings-logout" onAction="#handleLogoutAction" maxWidth="Infinity">
                                 <graphic>
                                     <FontAwesomeIconView glyphName="SIGN_OUT" size="13" styleClass="settings-logout-icon"/>
                                 </graphic>
@@ -235,7 +237,7 @@
                         </VBox>
                     </HBox>
 
-                    <VBox styleClass="settings-card" spacing="14">
+                    <VBox styleClass="settings-card" spacing="24">
                         <Label text="Безопасность" styleClass="settings-section-title"/>
 
                         <GridPane hgap="14" vgap="8">
