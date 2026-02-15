@@ -4,6 +4,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
@@ -11,21 +13,26 @@
             styleClass="dashboard-root">
 
     <left>
-        <VBox styleClass="sidebar" prefWidth="220" spacing="0">
+        <VBox styleClass="sidebar" prefWidth="256" spacing="0">
             <VBox styleClass="sidebar-header" spacing="5" alignment="CENTER_LEFT">
                 <Label text="Finance Tracker" styleClass="sidebar-title"/>
                 <Label text="Личные финансы" styleClass="sidebar-subtitle"/>
                 <VBox.margin>
-                    <Insets top="20" right="20" bottom="20" left="20"/>
+                    <Insets top="24" right="24" bottom="20" left="24"/>
                 </VBox.margin>
             </VBox>
 
-            <VBox styleClass="sidebar-menu" spacing="2" VBox.vgrow="ALWAYS">
+            <VBox styleClass="sidebar-menu" spacing="4" VBox.vgrow="ALWAYS">
                 <Button fx:id="dashboardMenuItem" styleClass="menu-item" onAction="#handleDashboardClick" maxWidth="Infinity">
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
-                            <FontAwesomeIconView glyphName="DASHBOARD" size="16" styleClass="menu-icon"/>
-                            <Label text="Dashboard" styleClass="menu-label"/>
+                            <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
+                                <image><Image url="@/icons/dashboard.png"/></image>
+                            </ImageView>
+                            <VBox spacing="1">
+                                <Label text="Dashboard" styleClass="menu-label"/>
+                                <Label text="Сводка" styleClass="menu-sublabel"/>
+                            </VBox>
                         </HBox>
                     </graphic>
                 </Button>
@@ -33,8 +40,13 @@
                 <Button fx:id="operationsMenuItem" styleClass="menu-item" onAction="#handleOperationsClick" maxWidth="Infinity">
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
-                            <FontAwesomeIconView glyphName="EXCHANGE" size="16" styleClass="menu-icon"/>
-                            <Label text="Operations" styleClass="menu-label"/>
+                            <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
+                                <image><Image url="@/icons/operations.png"/></image>
+                            </ImageView>
+                            <VBox spacing="1">
+                                <Label text="Operations" styleClass="menu-label"/>
+                                <Label text="Операции" styleClass="menu-sublabel"/>
+                            </VBox>
                         </HBox>
                     </graphic>
                 </Button>
@@ -42,8 +54,13 @@
                 <Button fx:id="categoriesMenuItem" styleClass="menu-item" onAction="#handleCategoriesClick" maxWidth="Infinity">
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
-                            <FontAwesomeIconView glyphName="FOLDER_OPEN" size="16" styleClass="menu-icon"/>
-                            <Label text="Categories" styleClass="menu-label"/>
+                            <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
+                                <image><Image url="@/icons/categories.png"/></image>
+                            </ImageView>
+                            <VBox spacing="1">
+                                <Label text="Categories" styleClass="menu-label"/>
+                                <Label text="Категории" styleClass="menu-sublabel"/>
+                            </VBox>
                         </HBox>
                     </graphic>
                 </Button>
@@ -51,8 +68,13 @@
                 <Button fx:id="plansLimitsMenuItem" styleClass="menu-item" onAction="#handlePlansLimitsClick" maxWidth="Infinity">
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
-                            <FontAwesomeIconView glyphName="LINE_CHART" size="16" styleClass="menu-icon"/>
-                            <Label text="Plans/Limits" styleClass="menu-label"/>
+                            <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
+                                <image><Image url="@/icons/limits.png"/></image>
+                            </ImageView>
+                            <VBox spacing="1">
+                                <Label text="Plans/Limits" styleClass="menu-label"/>
+                                <Label text="Лимиты" styleClass="menu-sublabel"/>
+                            </VBox>
                         </HBox>
                     </graphic>
                 </Button>
@@ -60,8 +82,13 @@
                 <Button fx:id="goalsDebtsMenuItem" styleClass="menu-item" onAction="#handleGoalsDebtsClick" maxWidth="Infinity">
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
-                            <FontAwesomeIconView glyphName="TARGET" size="16" styleClass="menu-icon"/>
-                            <Label text="Goals &amp; Debts" styleClass="menu-label"/>
+                            <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
+                                <image><Image url="@/icons/goals.png"/></image>
+                            </ImageView>
+                            <VBox spacing="1">
+                                <Label text="Goals &amp; Debts" styleClass="menu-label"/>
+                                <Label text="Цели и долги" styleClass="menu-sublabel"/>
+                            </VBox>
                         </HBox>
                     </graphic>
                 </Button>
@@ -69,8 +96,13 @@
                 <Button fx:id="settingsMenuItem" styleClass="menu-item, menu-item-active" onAction="#handleSettingsClick" maxWidth="Infinity">
                     <graphic>
                         <HBox spacing="12" alignment="CENTER_LEFT">
-                            <FontAwesomeIconView glyphName="COG" size="16" styleClass="menu-icon"/>
-                            <Label text="Settings" styleClass="menu-label"/>
+                            <ImageView fitWidth="20" fitHeight="20" preserveRatio="true">
+                                <image><Image url="@/icons/settings.png"/></image>
+                            </ImageView>
+                            <VBox spacing="1">
+                                <Label text="Settings" styleClass="menu-label"/>
+                                <Label text="Настройки" styleClass="menu-sublabel"/>
+                            </VBox>
                         </HBox>
                     </graphic>
                 </Button>
@@ -224,6 +256,36 @@
 
                         <HBox alignment="CENTER_RIGHT">
                             <Button text="Обновить пароль" styleClass="primary-button" onAction="#handleUpdatePassword"/>
+                        </HBox>
+                    </VBox>
+
+                    <VBox styleClass="settings-card" spacing="14">
+                        <Label text="Управление данными" styleClass="settings-section-title"/>
+
+                        <HBox alignment="CENTER_LEFT" spacing="14">
+                            <VBox spacing="4" HBox.hgrow="ALWAYS">
+                                <Label text="Экспорт данных" styleClass="settings-item-title"/>
+                                <Label text="Скачать все данные в формате CSV" styleClass="settings-item-subtitle"/>
+                            </VBox>
+                            <Button text="Экспортировать" styleClass="primary-button" onAction="#handleExportData"/>
+                        </HBox>
+
+                        <Separator/>
+
+                        <HBox alignment="CENTER_LEFT" spacing="14">
+                            <VBox spacing="4" HBox.hgrow="ALWAYS">
+                                <Label text="Импорт данных" styleClass="settings-item-title"/>
+                                <Label text="Загрузить данные из файла CSV" styleClass="settings-item-subtitle"/>
+                            </VBox>
+                            <Button text="Импортировать" styleClass="primary-button" onAction="#handleImportData"/>
+                        </HBox>
+                    </VBox>
+
+                    <VBox styleClass="danger-zone-card" spacing="14">
+                        <Label text="Опасная зона" styleClass="danger-zone-title"/>
+                        <Label text="Удаление аккаунта приведёт к безвозвратной потере всех данных. Это действие нельзя отменить." styleClass="danger-zone-text" wrapText="true"/>
+                        <HBox alignment="CENTER_RIGHT">
+                            <Button text="Удалить аккаунт" styleClass="danger-button" onAction="#handleDeleteAccount"/>
                         </HBox>
                     </VBox>
                 </VBox>

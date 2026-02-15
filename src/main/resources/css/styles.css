@@ -106,7 +106,7 @@
 
 .menu-label {
     -fx-text-fill: -text-secondary;
-    -fx-font-size: 18px;
+    -fx-font-size: 14px;
     -fx-font-weight: 500;
 }
 
@@ -117,7 +117,7 @@
 
 .menu-sublabel {
     -fx-text-fill: -text-muted;
-    -fx-font-size: 15px;
+    -fx-font-size: 12px;
 }
 
 .menu-item-active .menu-sublabel {
@@ -777,12 +777,17 @@
 }
 
 .operations-table .table-row-cell:selected {
-    -fx-background-color: #EFF6FF;
+    -fx-background-color: #DBEAFE;
+}
+
+.operations-table .table-row-cell:selected .label {
+    -fx-text-fill: -text-primary;
 }
 
 .operations-table .table-cell {
     -fx-padding: 8px;
     -fx-alignment: CENTER_LEFT;
+    -fx-text-fill: -text-primary;
 }
 
 .operations-table .amount-column .table-cell {
@@ -887,13 +892,13 @@
    ======================================== */
 
 .limits-page-title {
-    -fx-font-size: 42px;
+    -fx-font-size: 30px;
     -fx-font-weight: 700;
     -fx-text-fill: -text-primary;
 }
 
 .limits-page-subtitle {
-    -fx-font-size: 15px;
+    -fx-font-size: 16px;
     -fx-text-fill: -text-secondary;
 }
 
@@ -911,7 +916,7 @@
 }
 
 .limits-summary-value {
-    -fx-font-size: 42px;
+    -fx-font-size: 24px;
     -fx-font-weight: 700;
     -fx-text-fill: -text-primary;
 }
@@ -933,7 +938,7 @@
 }
 
 .limit-card-title {
-    -fx-font-size: 24px;
+    -fx-font-size: 18px;
     -fx-font-weight: 600;
     -fx-text-fill: -text-primary;
 }
@@ -1036,7 +1041,7 @@
 }
 
 .limit-metric-value {
-    -fx-font-size: 28px;
+    -fx-font-size: 18px;
     -fx-font-weight: 700;
 }
 
@@ -1077,7 +1082,7 @@
    ======================================== */
 
 .goals-page-title {
-    -fx-font-size: 46px;
+    -fx-font-size: 30px;
     -fx-font-weight: 700;
     -fx-text-fill: -text-primary;
 }
@@ -1091,11 +1096,11 @@
 }
 
 .goal-icon {
-    -fx-font-size: 34px;
+    -fx-font-size: 36px;
 }
 
 .goal-title {
-    -fx-font-size: 34px;
+    -fx-font-size: 16px;
     -fx-font-weight: 500;
     -fx-text-fill: -text-primary;
 }
@@ -1137,7 +1142,7 @@
 }
 
 .goal-progress-value {
-    -fx-font-size: 50px;
+    -fx-font-size: 30px;
     -fx-font-weight: 700;
 }
 
@@ -1152,7 +1157,7 @@
 }
 
 .goal-metric-value {
-    -fx-font-size: 38px;
+    -fx-font-size: 18px;
     -fx-font-weight: 700;
     -fx-text-fill: -text-primary;
 }
@@ -1162,12 +1167,12 @@
 }
 
 .goal-metric-target {
-    -fx-font-size: 42px;
+    -fx-font-size: 20px;
 }
 
 .goal-topup-button {
     -fx-text-fill: white;
-    -fx-font-size: 30px;
+    -fx-font-size: 14px;
     -fx-font-weight: 500;
     -fx-background-radius: 10px;
     -fx-padding: 12px 16px;
@@ -1180,13 +1185,13 @@
 
 /* ===== SETTINGS PAGE ===== */
 .settings-page-title {
-    -fx-font-size: 46px;
+    -fx-font-size: 30px;
     -fx-font-weight: 800;
     -fx-text-fill: -text-primary;
 }
 
 .settings-page-subtitle {
-    -fx-font-size: 26px;
+    -fx-font-size: 16px;
     -fx-text-fill: -text-secondary;
 }
 
@@ -1199,19 +1204,19 @@
 }
 
 .settings-section-title {
-    -fx-font-size: 34px;
+    -fx-font-size: 16px;
     -fx-font-weight: 700;
     -fx-text-fill: -text-primary;
 }
 
 .settings-item-title {
-    -fx-font-size: 24px;
+    -fx-font-size: 16px;
     -fx-font-weight: 500;
     -fx-text-fill: -text-primary;
 }
 
 .settings-item-subtitle {
-    -fx-font-size: 20px;
+    -fx-font-size: 14px;
     -fx-text-fill: -text-secondary;
 }
 
@@ -1223,7 +1228,7 @@
     -fx-background-color: #F3F4F6;
     -fx-background-radius: 8px;
     -fx-border-radius: 8px;
-    -fx-font-size: 24px;
+    -fx-font-size: 14px;
     -fx-text-fill: -text-primary;
 }
 
@@ -1276,26 +1281,26 @@
 }
 
 .settings-profile-avatar {
-    -fx-pref-width: 72px;
-    -fx-pref-height: 72px;
+    -fx-pref-width: 80px;
+    -fx-pref-height: 80px;
     -fx-background-color: linear-gradient(to right, #2563EB, #3B82F6);
     -fx-background-radius: 36px;
 }
 
 .settings-profile-initials {
-    -fx-font-size: 28px;
+    -fx-font-size: 24px;
     -fx-font-weight: 700;
     -fx-text-fill: white;
 }
 
 .settings-profile-name {
-    -fx-font-size: 36px;
+    -fx-font-size: 18px;
     -fx-font-weight: 700;
     -fx-text-fill: -text-primary;
 }
 
 .settings-profile-email {
-    -fx-font-size: 26px;
+    -fx-font-size: 14px;
     -fx-text-fill: -text-secondary;
 }
 
@@ -1305,7 +1310,7 @@
     -fx-border-radius: 8px;
     -fx-background-radius: 8px;
     -fx-padding: 8px 10px;
-    -fx-font-size: 24px;
+    -fx-font-size: 14px;
     -fx-text-fill: -text-primary;
     -fx-alignment: CENTER_LEFT;
     -fx-cursor: hand;
@@ -1331,6 +1336,40 @@
     -fx-background-color: #F3F4F6;
     -fx-background-radius: 8px;
     -fx-border-radius: 8px;
-    -fx-font-size: 22px;
+    -fx-font-size: 14px;
     -fx-pref-height: 44px;
+}
+
+/* ===== DANGER ZONE ===== */
+.danger-zone-card {
+    -fx-background-color: #FEF2F2;
+    -fx-background-radius: 14px;
+    -fx-border-color: #FECACA;
+    -fx-border-radius: 14px;
+    -fx-padding: 22px;
+}
+
+.danger-zone-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #DC2626;
+}
+
+.danger-zone-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #991B1B;
+}
+
+.danger-button {
+    -fx-background-color: #DC2626;
+    -fx-background-radius: 8px;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.danger-button:hover {
+    -fx-background-color: #B91C1C;
 }

@@ -159,6 +159,38 @@ public class SettingsController {
         });
     }
 
+    // ========== DATA MANAGEMENT ==========
+
+    @FXML
+    private void handleExportData() {
+        showComingSoon("Экспорт данных");
+    }
+
+    @FXML
+    private void handleImportData() {
+        showComingSoon("Импорт данных");
+    }
+
+    @FXML
+    private void handleDeleteAccount() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Удаление аккаунта");
+        alert.setHeaderText("Вы уверены?");
+        alert.setContentText("Все данные будут удалены безвозвратно. Это действие нельзя отменить.");
+
+        ButtonType deleteButton = new ButtonType("Удалить");
+        ButtonType cancelButton = new ButtonType("Отмена", ButtonBar.ButtonData.CANCEL_CLOSE);
+        alert.getButtonTypes().setAll(deleteButton, cancelButton);
+
+        alert.showAndWait().ifPresent(response -> {
+            if (response == deleteButton) {
+                showInfo("Аккаунт удалён", "Аккаунт успешно удалён (mock-сценарий).");
+                authService.logout();
+                SceneManager.switchScene("login");
+            }
+        });
+    }
+
     // ========== TOP BAR ACTIONS ==========
 
     @FXML

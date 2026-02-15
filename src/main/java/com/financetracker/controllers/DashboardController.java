@@ -22,7 +22,8 @@ import java.util.Map;
 /**
  * Контроллер для главного экрана Dashboard
  */
-public class DashboardController {
+public class
+DashboardController {
     
     // Top bar
     @FXML private TextField searchField;

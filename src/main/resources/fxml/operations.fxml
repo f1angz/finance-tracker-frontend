@@ -182,7 +182,7 @@
             </HBox>
             
             <!-- Основной контент -->
-            <VBox styleClass="operations-content" VBox.vgrow="ALWAYS">
+            <VBox spacing="24" styleClass="operations-content" VBox.vgrow="ALWAYS">
                 
                 <!-- Заголовок и описание -->
                 <VBox spacing="9">
@@ -194,7 +194,13 @@
                 </VBox>
                 
                 <!-- Панель фильтров -->
-                <HBox alignment="CENTER_LEFT" styleClass="filter-panel">
+                <HBox alignment="CENTER_LEFT" spacing="16" styleClass="filter-panel">
+                    <padding>
+                        <Insets top="16" right="24" bottom="16" left="24"/>
+                    </padding>
+                    <VBox.margin>
+                        <Insets left="32" right="32"/>
+                    </VBox.margin>
                     <!-- Поиск по таблице -->
                     <HBox alignment="CENTER_LEFT" spacing="10" styleClass="filter-search">
                         <FontAwesomeIconView glyphName="SEARCH" size="14" styleClass="search-icon" />
@@ -230,24 +236,32 @@
                     </Button>
                 </HBox>
                 
-                <!-- Индикаторы типов операций -->
-                <HBox alignment="CENTER_LEFT" spacing="20">
-                    <HBox alignment="CENTER" spacing="8">
-                        <StackPane styleClass="type-indicator, type-indicator-income" />
-                        <Label prefHeight="17.0" prefWidth="50.0" styleClass="type-label" text="Доходы" />
-                    </HBox>
-                    <HBox alignment="CENTER" spacing="8">
-                        <StackPane styleClass="type-indicator, type-indicator-expense" />
-                        <Label styleClass="type-label" text="Расходы" />
-                    </HBox>
-                </HBox>
-                
                 <!-- Карточка с таблицей -->
-                <VBox styleClass="table-card" VBox.vgrow="ALWAYS">
-                    
-                    <!-- Заголовок таблицы -->
+                <VBox spacing="20" styleClass="table-card" VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets left="32" right="32" bottom="32"/>
+                    </VBox.margin>
+
+                    <!-- Заголовок таблицы с индикаторами -->
                     <HBox alignment="CENTER_LEFT" spacing="10">
+                        <VBox.margin>
+                            <Insets bottom="0"/>
+                        </VBox.margin>
                         <Label styleClass="table-header" text="Список операций (12)" />
+
+                        <Region HBox.hgrow="ALWAYS" />
+
+                        <!-- Индикаторы типов операций -->
+                        <HBox alignment="CENTER" spacing="20">
+                            <HBox alignment="CENTER" spacing="8">
+                                <StackPane styleClass="type-indicator, type-indicator-income" />
+                                <Label styleClass="type-label" text="Доходы" />
+                            </HBox>
+                            <HBox alignment="CENTER" spacing="8">
+                                <StackPane styleClass="type-indicator, type-indicator-expense" />
+                                <Label styleClass="type-label" text="Расходы" />
+                            </HBox>
+                        </HBox>
                     </HBox>
                     
                     <!-- Таблица операций -->
